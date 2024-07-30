@@ -35,10 +35,8 @@
 				<h2>Menu</h2>
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
-					<li><a href="#">Log In</a></li>
-					<li><a href="#">Sign Up</a></li>
+					<li><a href="about_me.html">About Me</a></li>
+					<li><a href="projects.html">Projects</a></li>
 				</ul>
 				<a href="#" class="close">Close</a>
 			</div>
@@ -59,11 +57,6 @@
 			<section id="about_me" class="wrapper spotlight style1">
 				<div class="inner">
 					<style>
-						#about_me {
-							text-align: center;
-							padding: 20px;
-						}
-
 						#about_me img {
 							border-radius: 50%;
 							margin-bottom: 20px;
@@ -78,30 +71,220 @@
 					<img src="images/yo.jpg" alt="Logo" width="500" height="500">
 					<div class="content">
 						<h2 class="major">About Me</h2>
-						<p>Hello! I'm Rubén, and I'm a <strong class="highlight">programmer</strong> and <strong class="highlight">videogame designer</strong>. 
-							I love programming and designing video games, bringing the ideas in my head to life. <br><br>
-							Additionally, I'm constantly <strong class="highlight">learning new things</strong> to both expand my knowledge and gain new
+						<p>Hello! I'm Rubén, and I'm a <strong class="highlight">programmer</strong> and <strong
+								class="highlight">videogame designer</strong>.
+							I love programming and designing video games, bringing the ideas in my head to life.
+							<br><br>
+							Additionally, I'm constantly <strong class="highlight">learning new things</strong> to both
+							expand my knowledge and gain new
 							experiences.
-							I take my work very seriously and am quite a <strong class="highlight">perfectionist</strong>, always prioritizing the delivery
+							I take my work very seriously and am quite a <strong
+								class="highlight">perfectionist</strong>, always prioritizing the delivery
 							of <strong class="highlight">impeccable and optimal</strong> work. While I often work alone,
-							some of my best experiences have come from <strong class="highlight">sharing ideas with team members</strong>.
-							I not only enjoy bringing my own <strong class="highlight">ideas to life</strong>, but I also love working with the ideas of
+							some of my best experiences have come from <strong class="highlight">sharing ideas with team
+								members</strong>.
+							I not only enjoy bringing my own <strong class="highlight">ideas to life</strong>, but I
+							also love working with the ideas of
 							others. <br><br>
-							Above all, I strive to <strong class="highlight">grow both professionally and personally</strong>.</p>
+							Above all, I strive to <strong class="highlight">grow both professionally and
+								personally</strong>.
+						</p>
+						<a href="about_me.html" class="special">Learn more</a>
 					</div>
 				</div>
 			</section>
 
 			<!-- Two -->
-			<section id="two" class="wrapper alt spotlight style2">
+			<section id="projects" class="wrapper alt spotlight style2">
 				<div class="inner">
-					<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+					<style>
+						#projects img {
+							border-radius: 5%;
+							margin-bottom: 20px;
+						}
+
+						.flex-container {
+							display: flex;
+							gap: 20px;
+						}
+
+						.image-container {
+							position: relative;
+							width: 250px;
+							height: 250px;
+							overflow: hidden;
+							border-radius: 8px;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+							margin-bottom: 20px;
+						}
+
+						.hover-image {
+							width: 100%;
+							height: 100%;
+							transition: all 0.3s ease;
+							display: block;
+						}
+
+						.overlay {
+							position: absolute;
+							top: 0;
+							left: 0;
+							right: 0;
+							bottom: 0;
+							background-color: rgba(0, 0, 0, 0.6);
+							opacity: 0;
+							transition: all 0.3s ease;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							color: white;
+							font-size: 1.2em;
+							text-align: center;
+							transform: translateY(100%);
+						}
+
+						.image-container:hover .hover-image {
+							transform: scale(1.1);
+							filter: brightness(0.7);
+						}
+
+						.image-container:hover .overlay {
+							opacity: 1;
+							transform: translateY(0);
+						}
+
+						.text {
+							padding: 10px;
+							max-width: 90%;
+						}
+
+						.text i {
+							margin-right: 8px;
+							font-size: 1.5em;
+						}
+
+						.popup {
+							display: none;
+							position: fixed;
+							z-index: 1000;
+							left: 0;
+							top: 0;
+							width: 100%;
+							height: 100%;
+							overflow: auto;
+							justify-content: center;
+							align-items: center;
+						}
+
+						.popup-content {
+							background-color: rgba(18, 28, 54, 0.8);
+							margin: auto;
+							padding: 20px;
+							border-radius: 8px;
+							width: 1720px;
+							height: 780px;
+							position: relative;
+							box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							text-align: center;
+							overflow: hidden;
+							margin-top: 100px;
+						}
+
+						.close {
+							position: absolute;
+							top: 10px;
+							right: 10px;
+							color: #333;
+							font-size: 24px;
+							font-weight: bold;
+							cursor: pointer;
+							transition: color 0.3s;
+						}
+
+						.popup-video {
+							position: relative;
+							width: auto;
+							height: auto;
+							margin-top: -100px;
+							display: flex;
+							justify-content: center;
+						}
+
+						.popup-video iframe {
+							width: 720px;
+							height: 405px;
+							border: none;
+						}
+
+						.popup-text {
+							margin-top: 50px;
+							padding-left: 150px;
+							padding-right: 150px;
+						}
+					</style>
 					<div class="content">
-						<h2 class="major">Tempus adipiscing</h2>
-						<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet
-							turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-							dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-						<a href="#" class="special">Learn more</a>
+						<h2 class="major">Projects</h2>
+						<div class="flex-container">
+							<!-- Project example 1 -->
+							<div class="image-container" onclick="openModal('project1')">
+								<img src="images/pic03.jpg" alt="Imagen de ejemplo" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo</div>
+								</div>
+							</div>
+							<!-- Project example 2 -->
+							<div class="image-container" onclick="openModal('project2')">
+								<img src="images/pic04.jpg" alt="Imagen de ejemplo 2" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo 2</div>
+								</div>
+							</div>
+						</div>
+						<a href="projects.html" class="special">Learn more</a>
+						<!-- Project PopUp 1 -->
+						<div id="project1" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('project1')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/XirDtoI4X7o" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 1</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Project PopUp 2 -->
+						<div id="project2" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('project2')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/CRd9kd8VEXI" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 2</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -219,7 +402,26 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>
+		function adjustModalVideoHeight() {
+			var modalVideo = document.querySelector('.modal-video');
+			var width = modalVideo.offsetWidth;
+			var height = width * 0.1;
 
+			// Ajusta el height del contenedor
+			modalVideo.style.height = height + 'px';
+		}
+
+		// Función para abrir el modal
+		function openModal(modalId) {
+			document.getElementById(modalId).style.display = 'flex';
+		}
+
+		// Función para cerrar el modal
+		function closeModal(modalId) {
+			document.getElementById(modalId).style.display = 'none';
+		}
+	</script>
 </body>
 
 </html>
