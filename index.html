@@ -45,7 +45,7 @@
 		<!-- Banner -->
 		<section id="banner">
 			<div class="inner">
-				<p style="font-size: 90px; margin-bottom: -30px;">Rubén Ayora Alcañiz</p>
+				<h2 style="font-size: 90px; margin-bottom: 50px;">Rubén Ayora Alcañiz</h2>
 				<p style="color: rgb(230, 92, 0); font-size: 42px;">Programmer and Game Designer</p>
 			</div>
 		</section>
@@ -94,7 +94,7 @@
 				</div>
 			</section>
 
-			<!-- Two -->
+			<!-- Projects -->
 			<section id="projects" class="wrapper alt spotlight style2">
 				<div class="inner">
 					<style>
@@ -289,60 +289,78 @@
 				</div>
 			</section>
 
-			<!-- Three -->
-			<section id="three" class="wrapper spotlight style3">
+			<!-- Skills -->
+			<section id="skills" class="wrapper spotlight style3">
 				<div class="inner">
-					<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-					<div class="content">
-						<h2 class="major">Nullam dignissim</h2>
-						<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet
-							turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla
-							dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
-						<a href="#" class="special">Learn more</a>
-					</div>
-				</div>
-			</section>
+					<style>
+						.gallery-container {
+							display: flex;
+							flex-wrap: wrap;
+							justify-content: center;
+							max-width: 1200px;
+							margin: 50px auto;
+							gap: 40px 80px;
+						}
 
-			<!-- Four -->
-			<section id="four" class="wrapper alt style1">
-				<div class="inner">
-					<h2 class="major">Vitae phasellus</h2>
-					<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat.
-						Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem
-						lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-					<section class="features">
-						<article>
-							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-							<h3 class="major">Sed feugiat lorem</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-							<h3 class="major">Nisl placerat</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-							<h3 class="major">Ante fermentum</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
-							<h3 class="major">Fusce consequat</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus
-								ultrices.</p>
-							<a href="#" class="special">Learn more</a>
-						</article>
-					</section>
-					<ul class="actions">
-						<li><a href="#" class="button">Browse All</a></li>
-					</ul>
+						.group {
+							overflow: hidden;
+							width: 250px;
+							height: auto;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							text-align: center;
+							transition: transform 0.3s ease;
+							margin-bottom: 0px;
+						}
+
+						.group img {
+							border-radius: 8px;
+							width: 250px;
+							height: 250px;
+							display: block;
+						}
+
+						.group-text {
+							padding: 10px;
+							font-size: 1.3em;
+							color: #333;
+							font-weight: bold;
+						}
+					</style>
+					<div class="content">
+						<h2 class="major">Skills</h2>
+						<div class="gallery-container">
+							<div class="group">
+								<img src="images/pic01.jpg" alt="Imagen 1">
+								<div class="group-text">Texto del Grupo 1</div>
+							</div>
+							<div class="group">
+								<img src="images/pic02.jpg" alt="Imagen 2">
+								<div class="group-text">Texto del Grupo 2</div>
+							</div>
+							<div class="group">
+								<img src="images/pic03.jpg" alt="Imagen 3">
+								<div class="group-text">Texto del Grupo 3</div>
+							</div>
+							<div class="group">
+								<img src="images/pic04.jpg" alt="Imagen 4">
+								<div class="group-text">Texto del Grupo 4</div>
+							</div>
+							<div class="group">
+								<img src="images/pic05.jpg" alt="Imagen 5">
+								<div class="group-text">Texto del Grupo 5</div>
+							</div>
+							<div class="group">
+								<img src="images/pic05.jpg" alt="Imagen 5">
+								<div class="group-text">Texto del Grupo 5</div>
+							</div>
+							<div class="group">
+								<img src="images/pic05.jpg" alt="Imagen 5">
+								<div class="group-text">Texto del Grupo 5</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -351,6 +369,11 @@
 		<!-- Footer -->
 		<section id="footer">
 			<div class="inner">
+				<style>
+					.icon {
+						font-size: 42px;
+					}
+				</style>
 				<h2 class="major">Get in touch</h2>
 				<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce
 					tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in
@@ -375,16 +398,10 @@
 					</ul>
 				</form>
 				<ul class="contact">
-					<li class="icon solid fa-home">
-						Untitled Inc<br />
-						1234 Somewhere Road Suite #2894<br />
-						Nashville, TN 00000-0000
-					</li>
-					<li class="icon solid fa-phone">(000) 000-0000</li>
-					<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-					<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-					<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-					<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
+					<li class="icon solid fa-phone">(+34) 601-12-18-00</li>
+					<li class="icon solid fa-envelope"><a href="mailto:information@untitled.tld">information@untitled.tld</a></li>
+					<li class="icon brands fa-linkedin-in"><a href="https://www.linkedin.com/in/rubén-ayora-alcañiz-6010a7244/">Rubén Ayora Alcañiz</a></li>
+					<li class="icon brands fa-github"><a href="https://github.com/RubokiReuchi">RubokiReuchi</a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; Untitled Inc. All rights reserved.</li>
@@ -403,15 +420,6 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		function adjustModalVideoHeight() {
-			var modalVideo = document.querySelector('.modal-video');
-			var width = modalVideo.offsetWidth;
-			var height = width * 0.1;
-
-			// Ajusta el height del contenedor
-			modalVideo.style.height = height + 'px';
-		}
-
 		// Función para abrir el modal
 		function openModal(modalId) {
 			document.getElementById(modalId).style.display = 'flex';
