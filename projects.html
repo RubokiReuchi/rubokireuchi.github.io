@@ -1,137 +1,340 @@
 <!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Projects</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+	<title>Rubén Ayora Alcañiz</title>
+	<link rel="icon" href="images/yo.jpg" type="image/x-icon" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+	<style>
+		#custom-banner {
+			padding: 3.75em 0 0 0;
+		}
 
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Projects</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+		#custom-banner .inner {
+			margin: 0 auto;
+			width: 55em;
+		}
 
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="generic.html">Generic</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="#">Log In</a></li>
-								<li><a href="#">Sign Up</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
+		.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			max-width: 1200px;
+			margin: 50px auto;
+			gap: 40px 60px;
+		}
 
-				<!-- Wrapper -->
-					<section id="wrapper">
-						<header>
-							<div class="inner">
-								<h2>Generic</h2>
-								<p>Phasellus non pulvinar erat. Fusce tincidunt nisl eget ipsum.</p>
-							</div>
-						</header>
+		.image-container {
+			position: relative;
+			width: 250px;
+			height: 250px;
+			overflow: hidden;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
+		}
 
-						<!-- Content -->
-							<div class="wrapper">
-								<div class="inner">
+		.hover-image {
+			width: 100%;
+			height: 100%;
+			transition: all 0.3s ease;
+			display: block;
+		}
 
-									<h3 class="major">Lorem ipsum dolor</h3>
-									<p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis semper. Curabitur purus leo donec vel dolor at arcu tincidunt bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non velit accumsan cursus. Etiam ut gravida sapien.</p>
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			opacity: 0;
+			transition: all 0.3s ease;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			font-size: 1.2em;
+			text-align: center;
+			transform: translateY(100%);
+		}
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+		.image-container:hover .hover-image {
+			transform: scale(1.1);
+			filter: brightness(0.7);
+		}
 
-									<h3 class="major">Vitae phasellus</h3>
-									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+		.image-container:hover .overlay {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
+		.text {
+			padding: 10px;
+			max-width: 90%;
+		}
 
-								</div>
-							</div>
+		.text i {
+			margin-right: 8px;
+			font-size: 1.5em;
+		}
 
-					</section>
+		.popup {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			justify-content: center;
+			align-items: center;
+		}
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="inner">
-							<h2 class="major">Get in touch</h2>
-							<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-							<ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul>
-							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
+		.popup-content {
+			background-color: rgba(18, 28, 54, 0.8);
+			margin: auto;
+			padding: 20px;
+			border-radius: 8px;
+			width: 1720px;
+			height: 780px;
+			position: relative;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			overflow: hidden;
+			margin-top: 100px;
+		}
 
+		.close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			color: #333;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: color 0.3s;
+		}
+
+		.popup-video {
+			position: relative;
+			width: auto;
+			height: auto;
+			margin-top: -100px;
+			display: flex;
+			justify-content: center;
+		}
+
+		.popup-video iframe {
+			width: 720px;
+			height: 405px;
+			border: none;
+		}
+
+		.popup-text {
+			margin-top: 50px;
+			padding-left: 150px;
+			padding-right: 150px;
+		}
+	</style>
+</head>
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1>Projects</h1>
+			<nav>
+				<a href="#menu">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_me.html">About Me</a></li>
+					<li><a href="projects.html">Projects</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
 			</div>
+		</nav>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Banner -->
+		<section id="custom-banner">
+			<div class="inner">
+				<p style="font-size: 90px;">Projects</p>
+			</div>
+		</section>
 
-	</body>
+		<!-- Wrapper -->
+		<section id="wrapper">
+			<!-- Top Projects -->
+			<section id="top-projects" class="wrapper spotlight style1">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">Top Projects</h2>
+						<div class="flex-container">
+							<!-- Project example 1 -->
+							<div class="image-container" onclick="openModal('top-project1')">
+								<img src="images/pic03.jpg" alt="Imagen de ejemplo" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo</div>
+								</div>
+							</div>
+							<!-- Project example 2 -->
+							<div class="image-container" onclick="openModal('top-project2')">
+								<img src="images/pic04.jpg" alt="Imagen de ejemplo 2" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo 2</div>
+								</div>
+							</div>
+						</div>
+						<!-- Project PopUp 1 -->
+						<div id="top-project1" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project1')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/XirDtoI4X7o" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 1</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Project PopUp 2 -->
+						<div id="top-project2" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project2')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/CRd9kd8VEXI" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 2</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Other Projects -->
+			<section id="footer">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">Other Projects</h2>
+						<div class="flex-container">
+							<!-- Project example 1 -->
+							<div class="image-container" onclick="openModal('top-project1')">
+								<img src="images/pic03.jpg" alt="Imagen de ejemplo" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo</div>
+								</div>
+							</div>
+							<!-- Project example 2 -->
+							<div class="image-container" onclick="openModal('top-project2')">
+								<img src="images/pic04.jpg" alt="Imagen de ejemplo 2" class="hover-image">
+								<div class="overlay">
+									<div class="text">Texto de ejemplo 2</div>
+								</div>
+							</div>
+						</div>
+						<!-- Project PopUp 1 -->
+						<div id="top-project1" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project1')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/XirDtoI4X7o" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 1</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
+						<!-- Project PopUp 2 -->
+						<div id="top-project2" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project2')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/CRd9kd8VEXI" allowfullscreen></iframe>
+								</div>
+								<div class="popup-text">
+									<h2>Texto de Ejemplo 2</h2>
+									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non
+										pulvinar erat. Fusce
+										tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet
+										lobortis lorem lacus in
+										tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</section>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script>
+		// Función para abrir el modal
+		function openModal(modalId) {
+			document.getElementById(modalId).style.display = 'flex';
+		}
+
+		// Función para cerrar el modal
+		function closeModal(modalId) {
+			document.getElementById(modalId).style.display = 'none';
+		}
+	</script>
+
+</body>
+
 </html>
