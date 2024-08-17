@@ -278,25 +278,25 @@
 					<div class="content">
 						<h2 class="major">Projects</h2>
 						<div class="flex-container">
-							<!-- Imperial Fall -->
-							<div class="image-container" onclick="openModal('project1')">
-								<img src="images/Projects_Images/Imperial_Fall.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Imperial Fall</div>
-								</div>
-							</div>
 							<!-- Gun Rush -->
-							<div class="image-container" onclick="openModal('project2')">
+							<div class="image-container" onclick="openModal('project1')">
 								<img src="images/Projects_Images/Gun_Rush.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Gun Rush</div>
 								</div>
 							</div>
 							<!-- Yokai Engine -->
-							<div class="image-container" onclick="openModal('project3')">
+							<div class="image-container" onclick="openModal('project2')">
 								<img src="images/Projects_Images/Yokai_Engine.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Yokai Engine</div>
+								</div>
+							</div>
+							<!-- Imperial Fall -->
+							<div class="image-container" onclick="openModal('project3')">
+								<img src="images/Projects_Images/Imperial_Fall.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Imperial Fall</div>
 								</div>
 							</div>
 							<!-- GotG The Bet -->
@@ -307,44 +307,11 @@
 								</div>
 							</div>
 						</div>
-						<a href="projects.html" class="special">Learn more</a>
-						<!-- Imperial Fall PopUp -->
+						<a href="projects.html" class="special">Other Projects</a>
+						<!-- Gun Rush PopUp -->
 						<div id="project1" class="popup">
 							<div class="popup-content">
 								<span class="close" onclick="closeModal('project1')">
-									<img src="assets/css/images/close.svg" alt="Cerrar"
-										style="width: 2em; height: 2em; cursor: pointer;">
-								</span>
-								<div class="popup-video">
-									<iframe src="https://www.youtube.com/embed/ZcurcKaMgCU" allowfullscreen></iframe>
-								</div>
-								<div class="popup-custom-row">
-									<div class="popup-icons-container">
-										<img src="images/Custom_Icons/SDL_Icon.png" class="icon-image">
-										<img src="images/Custom_Icons/Box2D_Icon.png" class="icon-image">
-										<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
-									</div>
-									<div class="popup-text">
-										<h2 class="popup-title">Imperial Fall</h2>
-										<p>Imperial Fall is a medieval videogame <strong class="highlight">RPG</strong>
-											with <strong class="highlight">Turn-Based-Combat</strong>,
-											set in the witch hunt period.<br><br>
-											My role in this project was to conceive, design, and implement all elements
-											related to the <strong class="highlight">game's combat</strong>,
-											including skills, roles, enemies, statistics, and the overall difficulty
-											progression throughout the game.</p>
-									</div>
-									<div class="popup-learn-more">
-										<a href="https://vozes.github.io/NautilusStudios-ProjectII_RPG/"
-											class="special">Learn more</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Gun Rush PopUp -->
-						<div id="project2" class="popup">
-							<div class="popup-content">
-								<span class="close" onclick="closeModal('project2')">
 									<img src="assets/css/images/close.svg" alt="Cerrar"
 										style="width: 2em; height: 2em; cursor: pointer;">
 								</span>
@@ -375,9 +342,9 @@
 							</div>
 						</div>
 						<!-- Yokai Engine PopUp -->
-						<div id="project3" class="popup">
+						<div id="project2" class="popup">
 							<div class="popup-content">
-								<span class="close" onclick="closeModal('project3')">
+								<span class="close" onclick="closeModal('project2')">
 									<img src="assets/css/images/close.svg" alt="Cerrar"
 										style="width: 2em; height: 2em; cursor: pointer;">
 								</span>
@@ -404,6 +371,39 @@
 								</div>
 							</div>
 						</div>
+						<!-- Imperial Fall PopUp -->
+						<div id="project3" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('project3')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/ZcurcKaMgCU" allowfullscreen></iframe>
+								</div>
+								<div class="popup-custom-row">
+									<div class="popup-icons-container">
+										<img src="images/Custom_Icons/SDL_Icon.png" class="icon-image">
+										<img src="images/Custom_Icons/Box2D_Icon.png" class="icon-image">
+										<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
+									</div>
+									<div class="popup-text">
+										<h2 class="popup-title">Imperial Fall</h2>
+										<p>Imperial Fall is a medieval videogame <strong class="highlight">RPG</strong>
+											with <strong class="highlight">Turn-Based-Combat</strong>,
+											set in the witch hunt period.<br><br>
+											My role in this project was to conceive, design, and implement all elements
+											related to the <strong class="highlight">game's combat</strong>,
+											including skills, inventory system, roles, enemies, statistics, and the overall difficulty
+											progression throughout the game.</p>
+									</div>
+									<div class="popup-learn-more">
+										<a href="https://vozes.github.io/NautilusStudios-ProjectII_RPG/"
+											class="special">Learn more</a>
+									</div>
+								</div>
+							</div>
+						</div>
 						<!-- GotG The Bet PopUp -->
 						<div id="project4" class="popup">
 							<div class="popup-content">
@@ -421,7 +421,7 @@
 									</div>
 									<div class="popup-text">
 										<h2 class="popup-title">Guardians of the Galaxy: The Bet</h2>
-										<p>Guardians of the Galaxy: The Bet is a Top-Down <strong class="highlight">Action Shooting</strong> game set in the Marvel Universe.
+										<p>Guardians of the Galaxy: The Bet is a Top-Down <strong class="highlight">Action Shooting</strong> game set in the Marvel Universe.<br>
 											My role in the project was to implement the entire <strong class="highlight">player control system</strong>, 
 											from the various <strong class="highlight">weapons</strong> and their effects to the character's movement itself. 
 											Additionally, I worked on other areas such as the implementation of map objects, some HUD functions, 
@@ -563,7 +563,11 @@
 
 		// Función para cerrar el modal
 		function closeModal(modalId) {
-			document.getElementById(modalId).style.display = 'none';
+			var modal = document.getElementById(modalId);
+			modal.style.display = "none";
+
+			var iframe = modal.querySelector("iframe");
+			iframe.src = iframe.src;
 		}
 	</script>
 </body>

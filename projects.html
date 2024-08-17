@@ -48,6 +48,17 @@
 			border-radius: 8px;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 			margin-bottom: 20px;
+			background-color: #324074;
+		}
+
+		.image-container-alt2 {
+			position: relative;
+			width: 250px;
+			height: 250px;
+			overflow: hidden;
+			border-radius: 8px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			margin-bottom: 20px;
 			background-color: #383b46;
 		}
 
@@ -93,6 +104,16 @@
 		}
 
 		.image-container-alt:hover .overlay {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.image-container-alt2:hover .hover-image {
+			transform: scale(1.1);
+			filter: brightness(0.7);
+		}
+
+		.image-container-alt2:hover .overlay {
 			opacity: 1;
 			transform: translateY(0);
 		}
@@ -265,25 +286,25 @@
 					<div class="content">
 						<h2 class="major">Top Projects</h2>
 						<div class="flex-container">
-							<!-- Imperial Fall -->
-							<div class="image-container" onclick="openModal('top-project1')">
-								<img src="images/Projects_Images/Imperial_Fall.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Imperial Fall</div>
-								</div>
-							</div>
 							<!-- Gun Rush -->
-							<div class="image-container" onclick="openModal('top-project2')">
+							<div class="image-container" onclick="openModal('top-project1')">
 								<img src="images/Projects_Images/Gun_Rush.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Gun Rush</div>
 								</div>
 							</div>
 							<!-- Yokai Engine -->
-							<div class="image-container" onclick="openModal('top-project3')">
+							<div class="image-container" onclick="openModal('top-project2')">
 								<img src="images/Projects_Images/Yokai_Engine.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Yokai Engine</div>
+								</div>
+							</div>
+							<!-- Imperial Fall -->
+							<div class="image-container" onclick="openModal('top-project3')">
+								<img src="images/Projects_Images/Imperial_Fall.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Imperial Fall</div>
 								</div>
 							</div>
 							<!-- GotG The Bet -->
@@ -294,10 +315,84 @@
 								</div>
 							</div>
 						</div>
-						<!-- Imperial Fall PopUp -->
+						<!-- Gun Rush PopUp -->
 						<div id="top-project1" class="popup">
 							<div class="popup-content">
 								<span class="close" onclick="closeModal('top-project1')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/dHwmuI5OdkI" allowfullscreen></iframe>
+								</div>
+								<div class="popup-custom-row">
+									<div class="popup-icons-container">
+										<i class="icon brands fa-unity"></i>
+										<img src="images/Custom_Icons/CSharp_Icon.png" class="icon-image">
+										<img src="images/Custom_Icons/VR_Icon.png" class="icon-image">
+										<img src="images/Custom_Icons/Blender_Icon.png" class="icon-image">
+									</div>
+									<div class="popup-text">
+										<h2 class="popup-title">Gun Rush</h2>
+										<p>Gun Rush is a <strong class="highlight">VR</strong> game in the <strong
+												class="highlight">roguelike</strong> genre,
+											featuring progression through acquiring new skills and improving
+											statistics.<br>
+											The dungeon is <strong class="highlight">procedurally generated</strong>
+											from pre-designed rooms.
+											The game shares several mechanics with the <strong
+												class="highlight">Metroidvania</strong> genre,
+											restricting player access to certain areas unless they possess the necessary
+											abilities.<br>
+											The combat system aims to emulate that of the Metroid Prime series, focusing
+											on fast-paced encounters.</p>
+									</div>
+									<div class="popup-learn-more">
+										<a href="https://github.com/RubokiReuchi/TFG_ProceduralVR" class="special">Learn
+											more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Yokai Engine PopUp -->
+						<div id="top-project2" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project2')">
+									<img src="assets/css/images/close.svg" alt="Cerrar"
+										style="width: 2em; height: 2em; cursor: pointer;">
+								</span>
+								<div class="popup-video">
+									<iframe src="https://www.youtube.com/embed/jrvIhYVSiKk" allowfullscreen></iframe>
+								</div>
+								<div class="popup-custom-row">
+									<div class="popup-icons-container">
+										<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image"
+											style="width: 70px;">
+										<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
+									</div>
+									<div class="popup-text">
+										<h2 class="popup-title">Yokai Engine</h2>
+										<p>Yokai Engine is an engine I created using <strong
+												class="highlight">OpenGL</strong> and ImGui as its interface.<br>
+											The engine can import models, move, scale, and rotate them, as well as
+											assign textures.<br>
+											The engine uses <strong class="highlight">GameObjects</strong> to modify the
+											various parameters of each object.
+											It also features a <strong class="highlight">node-based scripting
+												system</strong>,
+											which allows for efficient and straightforward development.</p>
+									</div>
+									<div class="popup-learn-more">
+										<a href="https://rubokireuchi.github.io/Yokai_Engine/" class="special">Learn
+											more</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Imperial Fall PopUp -->
+						<div id="top-project3" class="popup">
+							<div class="popup-content">
+								<span class="close" onclick="closeModal('top-project3')">
 									<img src="assets/css/images/close.svg" alt="Cerrar"
 										style="width: 2em; height: 2em; cursor: pointer;">
 								</span>
@@ -317,75 +412,12 @@
 											set in the witch hunt period.<br><br>
 											My role in this project was to conceive, design, and implement all elements
 											related to the <strong class="highlight">game's combat</strong>,
-											including skills, roles, enemies, statistics, and the overall difficulty
+											including skills, inventory system, roles, enemies, statistics, and the overall difficulty
 											progression throughout the game.</p>
 									</div>
 									<div class="popup-learn-more">
 										<a href="https://vozes.github.io/NautilusStudios-ProjectII_RPG/"
 											class="special">Learn more</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Gun Rush PopUp -->
-						<div id="top-project2" class="popup">
-							<div class="popup-content">
-								<span class="close" onclick="closeModal('top-project2')">
-									<img src="assets/css/images/close.svg" alt="Cerrar"
-										style="width: 2em; height: 2em; cursor: pointer;">
-								</span>
-								<div class="popup-video">
-									<iframe src="https://www.youtube.com/embed/dHwmuI5OdkI" allowfullscreen></iframe>
-								</div>
-								<div class="popup-custom-row">
-									<div class="popup-icons-container">
-										<i class="icon brands fa-unity"></i>
-										<img src="images/Custom_Icons/CSharp_Icon.png" class="icon-image">
-										<img src="images/Custom_Icons/VR_Icon.png" class="icon-image">
-										<img src="images/Custom_Icons/Blender_Icon.png" class="icon-image">
-									</div>
-									<div class="popup-text">
-										<h2 class="popup-title">Gun Rush</h2>
-										<p>Gun Rush is a <strong class="highlight">VR</strong> game in the <strong class="highlight">roguelike</strong> genre, 
-											featuring progression through acquiring new skills and improving statistics.<br>
-											The dungeon is <strong class="highlight">procedurally generated</strong> from pre-designed rooms. 
-											The game shares several mechanics with the <strong class="highlight">Metroidvania</strong> genre, 
-											restricting player access to certain areas unless they possess the necessary abilities.<br>
-											The combat system aims to emulate that of the Metroid Prime series, focusing on fast-paced encounters.</p>
-									</div>
-									<div class="popup-learn-more">
-										<a href="https://github.com/RubokiReuchi/TFG_ProceduralVR" class="special">Learn
-											more</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Yokai Engine PopUp -->
-						<div id="top-project3" class="popup">
-							<div class="popup-content">
-								<span class="close" onclick="closeModal('top-project3')">
-									<img src="assets/css/images/close.svg" alt="Cerrar"
-										style="width: 2em; height: 2em; cursor: pointer;">
-								</span>
-								<div class="popup-video">
-									<iframe src="https://www.youtube.com/embed/jrvIhYVSiKk" allowfullscreen></iframe>
-								</div>
-								<div class="popup-custom-row">
-									<div class="popup-icons-container">
-										<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image" style="width: 70px;">
-										<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
-									</div>
-									<div class="popup-text">
-										<h2 class="popup-title">Yokai Engine</h2>
-										<p>Yokai Engine is an engine I created using <strong class="highlight">OpenGL</strong> and ImGui as its interface.<br>
-											The engine can import models, move, scale, and rotate them, as well as assign textures.<br>
-											The engine uses <strong class="highlight">GameObjects</strong> to modify the various parameters of each object. 
-											It also features a <strong class="highlight">node-based scripting system</strong>, 
-											which allows for efficient and straightforward development.</p>
-									</div>
-									<div class="popup-learn-more">
-										<a href="https://rubokireuchi.github.io/Yokai_Engine/" class="special">Learn
-											more</a>
 									</div>
 								</div>
 							</div>
@@ -402,15 +434,21 @@
 								</div>
 								<div class="popup-custom-row">
 									<div class="popup-icons-container">
-										<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image" style="width: 70px;">
+										<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image"
+											style="width: 70px;">
 										<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
 									</div>
 									<div class="popup-text">
 										<h2 class="popup-title">Guardians of the Galaxy: The Bet</h2>
-										<p>Guardians of the Galaxy: The Bet is a Top-Down <strong class="highlight">Action Shooting</strong> game set in the Marvel Universe.
-											My role in the project was to implement the entire <strong class="highlight">player control system</strong>, 
-											from the various <strong class="highlight">weapons</strong> and their effects to the character's movement itself. 
-											Additionally, I worked on other areas such as the implementation of map objects, some HUD functions, 
+										<p>Guardians of the Galaxy: The Bet is a Top-Down <strong
+												class="highlight">Action Shooting</strong> game set in the Marvel
+											Universe.<br>
+											My role in the project was to implement the entire <strong
+												class="highlight">player control system</strong>,
+											from the various <strong class="highlight">weapons</strong> and their
+											effects to the character's movement itself.
+											Additionally, I worked on other areas such as the implementation of map
+											objects, some HUD functions,
 											the weapons of certain enemies, and the loot system.</p>
 									</div>
 									<div class="popup-learn-more">
@@ -425,7 +463,7 @@
 			</section>
 
 			<!-- Other Projects -->
-			<section id="footer">
+			<section id="other-projects" class="wrapper alt spotlight style2">
 				<div class="inner">
 					<div class="content">
 						<h2 class="major">Other Projects</h2>
@@ -437,74 +475,18 @@
 									<div class="text">Devil Hunter</div>
 								</div>
 							</div>
-							<!-- Stealth Level Design -->
-							<div class="image-container-alt" onclick="openModal('other-project2')">
-								<img src="images/Projects_Images/Stealth_Level_Design.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Stealth Blockout</div>
-								</div>
-							</div>
-							<!-- Shooting Range -->
-							<div class="image-container-alt" onclick="openModal('other-project3')">
-								<img src="images/Projects_Images/Shooting_Range.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Shooting Range</div>
-								</div>
-							</div>
 							<!-- Adventure Game -->
-							<div class="image-container-alt" onclick="openModal('other-project4')">
+							<div class="image-container-alt" onclick="openModal('other-project2')">
 								<img src="images/Projects_Images/Adventure_Game_Showcase.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Adventure Game</div>
 								</div>
 							</div>
-							<!-- Fighter Game -->
-							<div class="image-container-alt" onclick="openModal('other-project5')">
-								<img src="images/Projects_Images/Fighter_Game.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Fighter Game</div>
-								</div>
-							</div>
-							<!-- Cat Platformer -->
-							<div class="image-container-alt" onclick="openModal('other-project6')">
-								<img src="images/Projects_Images/Cat_Platformer.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Cat Platformer</div>
-								</div>
-							</div>
 							<!-- Echoes form the Past -->
-							<div class="image-container-alt" onclick="openModal('other-project7')">
+							<div class="image-container-alt" onclick="openModal('other-project3')">
 								<img src="images/Projects_Images/Echoes_form_ther_Past.png" class="hover-image">
 								<div class="overlay">
 									<div class="text">Echoes form the Past</div>
-								</div>
-							</div>
-							<!-- Pinball -->
-							<div class="image-container-alt" onclick="openModal('other-project8')">
-								<img src="images/Projects_Images/Pinball.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Pinball</div>
-								</div>
-							</div>
-							<!-- Racing Car -->
-							<div class="image-container-alt" onclick="openModal('other-project9')">
-								<img src="images/Projects_Images/Racing_Car.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Racing Car</div>
-								</div>
-							</div>
-							<!-- 2D Physics Engine -->
-							<div class="image-container-alt" onclick="openModal('other-project10')">
-								<img src="images/Projects_Images/2D_Physic_Engine.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">2D Physics Engine</div>
-								</div>
-							</div>
-							<!-- Mega Bomberman -->
-							<div class="image-container-alt" onclick="openModal('other-project11')">
-								<img src="images/Projects_Images/Mega_Bomberman.png" class="hover-image">
-								<div class="overlay">
-									<div class="text">Mega Bomberman</div>
 								</div>
 							</div>
 							<!-- Devil Hunter -->
@@ -526,12 +508,17 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Devil Hunter</h2>
-											<p>The project is a prototype of a <strong class="highlight">2D Metroidvania</strong> game with a 
+											<p>The project is a prototype of a <strong class="highlight">2D
+													Metroidvania</strong> game with a
 												<strong class="highlight">Hack & Slash</strong> combat style.<br>
-												The game focuses on executing combos and <strong class="highlight">mastering combat</strong>, 
-												rewarding players for landing hits without taking damage. 
-												When the player lands enough hits, they can unleash a devastating attack.<br>
-												The visual style of the protagonist aims to replicate the character Dante from <strong class="highlight">Devil May Cry</strong>.</p>
+												The game focuses on executing combos and <strong
+													class="highlight">mastering combat</strong>,
+												rewarding players for landing hits without taking damage.
+												When the player lands enough hits, they can unleash a devastating
+												attack.<br>
+												The visual style of the protagonist aims to replicate the character
+												Dante from <strong class="highlight">Devil May Cry</strong>.
+											</p>
 										</div>
 										<div class="popup-learn-more">
 											<a href="https://github.com/RubokiReuchi/Devil-Hunter" class="special">Learn
@@ -540,73 +527,10 @@
 									</div>
 								</div>
 							</div>
-							<!-- Stealth Level Design -->
+							<!-- Adventure Game -->
 							<div id="other-project2" class="popup">
 								<div class="popup-content">
 									<span class="close" onclick="closeModal('other-project2')">
-										<img src="assets/css/images/close.svg" alt="Cerrar"
-											style="width: 2em; height: 2em; cursor: pointer;">
-									</span>
-									<div class="popup-video">
-										<iframe src="https://www.youtube.com/embed/_SgFDXJFTZ4"
-											allowfullscreen></iframe>
-									</div>
-									<div class="popup-custom-row">
-										<div class="popup-icons-container">
-											<img src="images/Custom_Icons/Unreal_Icon.png" class="icon-image">
-										</div>
-										<div class="popup-text">
-											<h2 class="popup-title">Stealth Blockout</h2>
-											<p>The project consists of a <strong class="highlight">blockout</strong> of a level in a <strong class="highlight">stealth game</strong> 
-												where you must avoid detection, and the only way to eliminate enemies is by approaching them from behind.<br>
-												In the level, you need to find multiple <strong class="highlight">objects</strong> to progress and complete the level 
-												without being detected.<br>
-												In the project, I was responsible for both <strong class="highlight">programming</strong> and the 
-												<strong class="highlight">design</strong> and construction of part of the level.</p>
-										</div>
-										<div class="popup-learn-more">
-											<a href="https://github.com/RubokiReuchi/StealthGameDesign"
-												class="special">Learn more</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Shooting Range -->
-							<div id="other-project3" class="popup">
-								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project3')">
-										<img src="assets/css/images/close.svg" alt="Cerrar"
-											style="width: 2em; height: 2em; cursor: pointer;">
-									</span>
-									<div class="popup-video">
-										<iframe src="https://www.youtube.com/embed/NhYe_WLrVMI"
-											allowfullscreen></iframe>
-									</div>
-									<div class="popup-custom-row">
-										<div class="popup-icons-container">
-											<i class="icon brands fa-unity"></i>
-											<img src="images/Custom_Icons/CSharp_Icon.png" class="icon-image">
-											<img src="images/Custom_Icons/VR_Icon.png" class="icon-image">
-										</div>
-										<div class="popup-text">
-											<h2 class="popup-title">Shooting Range</h2>
-											<p>The <strong class="highlight">VR</strong> game offers three levels, each featuring a different weapon, 
-												where you must <strong class="highlight">shoot</strong> the targets that appear, 
-												aiming to hit as many <strong class="highlight">bullseyes</strong> as possible.<br>
-												In the game, I was responsible for the implementation of the <strong class="highlight">sawed-off shotgun</strong> and for 
-												programming the scoring system and the appearance of the targets.</p>
-										</div>
-										<div class="popup-learn-more">
-											<a href="https://github.com/RubokiReuchi/Shooting_Range"
-												class="special">Learn more</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Adventure Game -->
-							<div id="other-project4" class="popup">
-								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project4')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -621,8 +545,10 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Adventure Game</h2>
-											<p>El proyecto fue creado para <strong class="highlight">aprender Unity</strong> y al comienzo se siguió un tutorial.<br>
-												El juego se inspira en los <strong class="highlight">Zelda 2D</strong> clásicos, teniendo variedad de puzles, 
+											<p>El proyecto fue creado para <strong class="highlight">aprender
+													Unity</strong> y al comienzo se siguió un tutorial.<br>
+												El juego se inspira en los <strong class="highlight">Zelda 2D</strong>
+												clásicos, teniendo variedad de puzles,
 												NPCs, armas y objetos así como las iconicas mazmorras con sus jefes.</p>
 										</div>
 										<div class="popup-learn-more">
@@ -632,69 +558,10 @@
 									</div>
 								</div>
 							</div>
-							<!-- Fighter Game -->
-							<div id="other-project5" class="popup">
-								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project5')">
-										<img src="assets/css/images/close.svg" alt="Cerrar"
-											style="width: 2em; height: 2em; cursor: pointer;">
-									</span>
-									<div class="popup-video">
-										<iframe src="https://www.youtube.com/embed/zbkO8VZeyDc"
-											allowfullscreen></iframe>
-									</div>
-									<div class="popup-custom-row">
-										<div class="popup-icons-container">
-											<i class="icon brands fa-unity"></i>
-											<img src="images/Custom_Icons/Maya_Icon.png" class="icon-image">
-										</div>
-										<div class="popup-text">
-											<h2 class="popup-title">Fighter Game</h2>
-											<p>The game features <strong class="highlight">combat</strong> similar to games like Mortal Kombat or Street Fighter.<br>
-												I animated the <strong class="highlight">elf character</strong> and programmed a simple system that detects when a character 
-												has been hit.</p>
-										</div>
-										<div class="popup-learn-more">
-											<a href="https://github.com/RubokiReuchi/Fighter-Game-Animation"
-												class="special">Learn more</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Cat Platformer -->
-							<div id="other-project6" class="popup">
-								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project6')">
-										<img src="assets/css/images/close.svg" alt="Cerrar"
-											style="width: 2em; height: 2em; cursor: pointer;">
-									</span>
-									<div class="popup-video">
-										<iframe src="https://www.youtube.com/embed/1sIIOn9BWpA"
-											allowfullscreen></iframe>
-									</div>
-									<div class="popup-custom-row">
-										<div class="popup-icons-container">
-											<img src="images/Custom_Icons/SDL_Icon.png" class="icon-image">
-											<img src="images/Custom_Icons/Box2D_Icon.png" class="icon-image">
-											<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
-										</div>
-										<div class="popup-text">
-											<h2 class="popup-title">Cat Platformer</h2>
-											<p>A very simple <strong class="highlight">platformer</strong> game where the character must complete the level 
-												<strong class="highlight">without taking any damage</strong>. 
-												To achieve this, the character has access to a double jump and a dash.</p>
-										</div>
-										<div class="popup-learn-more">
-											<a href="https://github.com/RubokiReuchi/Development-Platform-Game"
-												class="special">Learn more</a>
-										</div>
-									</div>
-								</div>
-							</div>
 							<!-- Echoes form the Past -->
-							<div id="other-project7" class="popup">
+							<div id="other-project3" class="popup">
 								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project7')">
+									<span class="close" onclick="closeModal('other-project3')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -711,12 +578,18 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Echoes form the Past</h2>
-											<p>The game was created in one week for a <strong class="highlight">Game Jam</strong> where the theme was 
+											<p>The game was created in one week for a <strong class="highlight">Game
+													Jam</strong> where the theme was
 												<strong class="highlight">Echo</strong>.<br>
-												In the game, <strong class="highlight">two players</strong> must collaborate to travel back in time and prevent a dreadful future.<br>
-												My role in the project consisted of <strong class="highlight">programming</strong> most of the puzzles and everything 
-												related to the characters. I also handled the game's <strong class="highlight">optimization</strong>, as well as the 
-												games <strong class="highlight">shaders</strong>.</p>
+												In the game, <strong class="highlight">two players</strong> must
+												collaborate to travel back in time and prevent a dreadful future.<br>
+												My role in the project consisted of <strong
+													class="highlight">programming</strong> most of the puzzles and
+												everything
+												related to the characters. I also handled the game's <strong
+													class="highlight">optimization</strong>, as well as the
+												games <strong class="highlight">shaders</strong>.
+											</p>
 										</div>
 										<div class="popup-learn-more">
 											<a href="https://nautilusstudios.itch.io/echoes-from-the-past"
@@ -725,10 +598,213 @@
 									</div>
 								</div>
 							</div>
+						</div>
+					</div>
+			</section>
+
+			<!-- School Projects -->
+			<section id="footer">
+				<div class="inner">
+					<div class="content">
+						<h2 class="major">School Projects</h2>
+						<div class="flex-container">
+							<!-- Stealth Level Design -->
+							<div class="image-container-alt2" onclick="openModal('school-project1')">
+								<img src="images/Projects_Images/Stealth_Level_Design.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Stealth Blockout</div>
+								</div>
+							</div>
+							<!-- Shooting Range -->
+							<div class="image-container-alt2" onclick="openModal('school-project2')">
+								<img src="images/Projects_Images/Shooting_Range.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Shooting Range</div>
+								</div>
+							</div>
+							<!-- Fighter Game -->
+							<div class="image-container-alt2" onclick="openModal('school-project3')">
+								<img src="images/Projects_Images/Fighter_Game.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Fighter Game</div>
+								</div>
+							</div>
+							<!-- Cat Platformer -->
+							<div class="image-container-alt2" onclick="openModal('school-project4')">
+								<img src="images/Projects_Images/Cat_Platformer.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Cat Platformer</div>
+								</div>
+							</div>
 							<!-- Pinball -->
-							<div id="other-project8" class="popup">
+							<div class="image-container-alt2" onclick="openModal('school-project5')">
+								<img src="images/Projects_Images/Pinball.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Pinball</div>
+								</div>
+							</div>
+							<!-- Racing Car -->
+							<div class="image-container-alt2" onclick="openModal('school-project6')">
+								<img src="images/Projects_Images/Racing_Car.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Racing Car</div>
+								</div>
+							</div>
+							<!-- 2D Physics Engine -->
+							<div class="image-container-alt2" onclick="openModal('school-project7')">
+								<img src="images/Projects_Images/2D_Physic_Engine.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">2D Physics Engine</div>
+								</div>
+							</div>
+							<!-- Mega Bomberman -->
+							<div class="image-container-alt2" onclick="openModal('school-project8')">
+								<img src="images/Projects_Images/Mega_Bomberman.png" class="hover-image">
+								<div class="overlay">
+									<div class="text">Mega Bomberman</div>
+								</div>
+							</div>
+							<!-- Stealth Level Design -->
+							<div id="school-project1" class="popup">
 								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project8')">
+									<span class="close" onclick="closeModal('school-project1')">
+										<img src="assets/css/images/close.svg" alt="Cerrar"
+											style="width: 2em; height: 2em; cursor: pointer;">
+									</span>
+									<div class="popup-video">
+										<iframe src="https://www.youtube.com/embed/_SgFDXJFTZ4"
+											allowfullscreen></iframe>
+									</div>
+									<div class="popup-custom-row">
+										<div class="popup-icons-container">
+											<img src="images/Custom_Icons/Unreal_Icon.png" class="icon-image">
+										</div>
+										<div class="popup-text">
+											<h2 class="popup-title">Stealth Blockout</h2>
+											<p>The project consists of a <strong class="highlight">blockout</strong> of
+												a level in a <strong class="highlight">stealth game</strong>
+												where you must avoid detection, and the only way to eliminate enemies is
+												by approaching them from behind.<br>
+												In the level, you need to find multiple <strong
+													class="highlight">objects</strong> to progress and complete the
+												level
+												without being detected.<br>
+												In the project, I was responsible for both <strong
+													class="highlight">programming</strong> and the
+												<strong class="highlight">design</strong> and construction of part of
+												the level.
+											</p>
+										</div>
+										<div class="popup-learn-more">
+											<a href="https://github.com/RubokiReuchi/StealthGameDesign"
+												class="special">Learn more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Shooting Range -->
+							<div id="school-project2" class="popup">
+								<div class="popup-content">
+									<span class="close" onclick="closeModal('school-project2')">
+										<img src="assets/css/images/close.svg" alt="Cerrar"
+											style="width: 2em; height: 2em; cursor: pointer;">
+									</span>
+									<div class="popup-video">
+										<iframe src="https://www.youtube.com/embed/NhYe_WLrVMI"
+											allowfullscreen></iframe>
+									</div>
+									<div class="popup-custom-row">
+										<div class="popup-icons-container">
+											<i class="icon brands fa-unity"></i>
+											<img src="images/Custom_Icons/CSharp_Icon.png" class="icon-image">
+											<img src="images/Custom_Icons/VR_Icon.png" class="icon-image">
+										</div>
+										<div class="popup-text">
+											<h2 class="popup-title">Shooting Range</h2>
+											<p>The <strong class="highlight">VR</strong> game offers three levels, each
+												featuring a different weapon,
+												where you must <strong class="highlight">shoot</strong> the targets that
+												appear,
+												aiming to hit as many <strong class="highlight">bullseyes</strong> as
+												possible.<br>
+												In the game, I was responsible for the implementation of the <strong
+													class="highlight">sawed-off shotgun</strong> and for
+												programming the scoring system and the appearance of the targets.</p>
+										</div>
+										<div class="popup-learn-more">
+											<a href="https://github.com/RubokiReuchi/Shooting_Range"
+												class="special">Learn more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Fighter Game -->
+							<div id="school-project3" class="popup">
+								<div class="popup-content">
+									<span class="close" onclick="closeModal('school-project3')">
+										<img src="assets/css/images/close.svg" alt="Cerrar"
+											style="width: 2em; height: 2em; cursor: pointer;">
+									</span>
+									<div class="popup-video">
+										<iframe src="https://www.youtube.com/embed/zbkO8VZeyDc"
+											allowfullscreen></iframe>
+									</div>
+									<div class="popup-custom-row">
+										<div class="popup-icons-container">
+											<i class="icon brands fa-unity"></i>
+											<img src="images/Custom_Icons/Maya_Icon.png" class="icon-image">
+										</div>
+										<div class="popup-text">
+											<h2 class="popup-title">Fighter Game</h2>
+											<p>The game features <strong class="highlight">combat</strong> similar to
+												games like Mortal Kombat or Street Fighter.<br>
+												I animated the <strong class="highlight">elf character</strong> and
+												programmed a simple system that detects when a character
+												has been hit.</p>
+										</div>
+										<div class="popup-learn-more">
+											<a href="https://github.com/RubokiReuchi/Fighter-Game-Animation"
+												class="special">Learn more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Cat Platformer -->
+							<div id="school-project4" class="popup">
+								<div class="popup-content">
+									<span class="close" onclick="closeModal('school-project4')">
+										<img src="assets/css/images/close.svg" alt="Cerrar"
+											style="width: 2em; height: 2em; cursor: pointer;">
+									</span>
+									<div class="popup-video">
+										<iframe src="https://www.youtube.com/embed/1sIIOn9BWpA"
+											allowfullscreen></iframe>
+									</div>
+									<div class="popup-custom-row">
+										<div class="popup-icons-container">
+											<img src="images/Custom_Icons/SDL_Icon.png" class="icon-image">
+											<img src="images/Custom_Icons/Box2D_Icon.png" class="icon-image">
+											<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
+										</div>
+										<div class="popup-text">
+											<h2 class="popup-title">Cat Platformer</h2>
+											<p>A very simple <strong class="highlight">platformer</strong> game where
+												the character must complete the level
+												<strong class="highlight">without taking any damage</strong>.
+												To achieve this, the character has access to a double jump and a dash.
+											</p>
+										</div>
+										<div class="popup-learn-more">
+											<a href="https://github.com/RubokiReuchi/Development-Platform-Game"
+												class="special">Learn more</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Pinball -->
+							<div id="school-project5" class="popup">
+								<div class="popup-content">
+									<span class="close" onclick="closeModal('school-project5')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -744,7 +820,9 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Pinball</h2>
-											<p>The game is a virtual Pinball in which players have <strong class="highlight">3 balls</strong> to achieve the highest possible score.</p>
+											<p>The game is a virtual Pinball in which players have <strong
+													class="highlight">3 balls</strong> to achieve the highest possible
+												score.</p>
 										</div>
 										<div class="popup-learn-more">
 											<a href="https://github.com/zapper163/Pinball-IsekaiPhysics"
@@ -754,9 +832,9 @@
 								</div>
 							</div>
 							<!-- Racing Car -->
-							<div id="other-project9" class="popup">
+							<div id="school-project6" class="popup">
 								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project9')">
+									<span class="close" onclick="closeModal('school-project6')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -766,14 +844,18 @@
 									</div>
 									<div class="popup-custom-row">
 										<div class="popup-icons-container">
-											<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image" style="width: 70px;">
+											<img src="images/Custom_Icons/OpenGL_Icon.png" class="icon-image"
+												style="width: 70px;">
 											<img src="images/Custom_Icons/C++_Icon.png" class="icon-image">
 											<img src="images/Custom_Icons/Bullet_Icon.png" class="icon-image">
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Racing Car</h2>
-											<p>Racing Car is a game where you must <strong class="highlight">drive a car</strong> around a track, passing through specific checkpoints.<br>
-												The car features <strong class="highlight">realistic physics</strong>, which makes controlling it more challenging compared 
+											<p>Racing Car is a game where you must <strong class="highlight">drive a
+													car</strong> around a track, passing through specific
+												checkpoints.<br>
+												The car features <strong class="highlight">realistic physics</strong>,
+												which makes controlling it more challenging compared
 												to vehicles typically found in video games.</p>
 										</div>
 										<div class="popup-learn-more">
@@ -784,9 +866,9 @@
 								</div>
 							</div>
 							<!-- 2D Physics Engine -->
-							<div id="other-project10" class="popup">
+							<div id="school-project7" class="popup">
 								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project10')">
+									<span class="close" onclick="closeModal('school-project7')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -802,7 +884,8 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">2D Physics Engine</h2>
-											<p>The project is a <strong class="highlight">2D physics engine</strong>, which includes a small game to test various functions of the engine.</p>
+											<p>The project is a <strong class="highlight">2D physics engine</strong>,
+												which includes a small game to test various functions of the engine.</p>
 										</div>
 										<div class="popup-learn-more">
 											<a href="https://github.com/RubokiReuchi/Physic_Motor" class="special">Learn
@@ -812,9 +895,9 @@
 								</div>
 							</div>
 							<!-- Mega Bomberman -->
-							<div id="other-project11" class="popup">
+							<div id="school-project8" class="popup">
 								<div class="popup-content">
-									<span class="close" onclick="closeModal('other-project11')">
+									<span class="close" onclick="closeModal('school-project8')">
 										<img src="assets/css/images/close.svg" alt="Cerrar"
 											style="width: 2em; height: 2em; cursor: pointer;">
 									</span>
@@ -829,8 +912,10 @@
 										</div>
 										<div class="popup-text">
 											<h2 class="popup-title">Mega Bomberman</h2>
-											<p>The project aims to <strong class="highlight">replicate</strong> the original Mega Bomberman, making it as similar as possible. 
-												The game includes the menus and the first <strong class="highlight">three levels</strong>.<br>
+											<p>The project aims to <strong class="highlight">replicate</strong> the
+												original Mega Bomberman, making it as similar as possible.
+												The game includes the menus and the first <strong
+													class="highlight">three levels</strong>.<br>
 												All the sprites used have been extracted from the original game.</p>
 										</div>
 										<div class="popup-learn-more">
@@ -861,7 +946,11 @@
 
 		// Función para cerrar el modal
 		function closeModal(modalId) {
-			document.getElementById(modalId).style.display = 'none';
+			var modal = document.getElementById(modalId);
+			modal.style.display = "none";
+
+			var iframe = modal.querySelector("iframe");
+			iframe.src = iframe.src;
 		}
 	</script>
 
